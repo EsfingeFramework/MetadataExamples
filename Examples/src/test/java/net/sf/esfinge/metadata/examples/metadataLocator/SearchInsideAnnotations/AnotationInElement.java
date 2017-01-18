@@ -1,4 +1,4 @@
-package net.sf.esfinge.metadata.examples.metadataLocator.simple;
+package net.sf.esfinge.metadata.examples.metadataLocator.SearchInsideAnnotations;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
@@ -9,6 +9,8 @@ import net.sf.esfinge.metadata.annotation.validator.SearchInsideAnnotations;
 import net.sf.esfinge.metadata.annotation.validator.SearchOnEnclosingElements;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface AnnotationInElement {
+@AnotationInAnotation
+@SearchInsideAnnotations
+public @interface AnotationInElement {
 
 }
