@@ -9,5 +9,4 @@ import net.sf.esfinge.metadata.annotation.validator.SearchInsideAnnotations;
 
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AnotationWinouthAnnotation {
-
 }

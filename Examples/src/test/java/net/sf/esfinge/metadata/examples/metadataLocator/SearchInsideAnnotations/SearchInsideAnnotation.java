@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import net.sf.esfinge.metadata.AnnotationFinder;
 
-public class MetadataLocatorTest {
+public class SearchInsideAnnotation {
 
 	@Test
 	public void metadataLocatorTestWithAnnotation() {
