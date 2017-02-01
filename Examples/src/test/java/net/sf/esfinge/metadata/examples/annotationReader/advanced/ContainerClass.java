@@ -83,6 +83,33 @@ public class ContainerClass {
 	public void setFieldWithAnnotation(List<FieldContainer> fieldWithAnnotation) {
 		this.fieldWithAnnotation = fieldWithAnnotation;
 	}
+	
+	public MethodContainer getAnnotedMethod(String name)
+	{
+		for(MethodContainer container : methodContainer)
+		{
+			System.out.println(container.getElementName());
+			System.out.println(name);
+			if(container.getElementName().equals(name))
+			{
+				return container;
+			}
+		}
+		return null;
+	}
+	
+	public FieldContainer getAnnotedField(String name)
+	{
+		for(FieldContainer container : fieldContainer)
+		{
+			if(container.getElementName().equals(name))
+			{
+				return container;
+			}
+		}
+		return null;
+	}
+
 
 	@Override
 	public String toString() {

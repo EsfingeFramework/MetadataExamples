@@ -8,10 +8,11 @@ public class ClassForReader {
 	@AnnotationInElement
 	private String fieldWithAnnotation;
 	
+	@AnnotationInElement
 	public void methodWithAnnotation(){
 		
 	}
-	@AnnotationInElement
+	
 	public void methodWinouthAnnotation(){
 		
 	}	
