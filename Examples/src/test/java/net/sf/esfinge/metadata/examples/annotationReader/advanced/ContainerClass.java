@@ -88,8 +88,6 @@ public class ContainerClass {
 	{
 		for(MethodContainer container : methodContainer)
 		{
-			System.out.println(container.getElementName());
-			System.out.println(name);
 			if(container.getElementName().equals(name))
 			{
 				return container;
