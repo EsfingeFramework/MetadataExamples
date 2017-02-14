@@ -30,12 +30,12 @@ public class AnnotationReaderTest {
 		
 		FieldContainer fieldWinouthAnnotation = container.getAnnotedField("fieldWinouthAnnotation");
 		assertEquals("fieldWinouthAnnotation", fieldWinouthAnnotation.getElementName());
-		assertFalse(methodWithAnnotation.isExistAnnotation());
+		assertFalse(fieldWinouthAnnotation.isExistAnnotation());
 
 		
 		FieldContainer fieldWithAnnotation = container.getAnnotedField("fieldWithAnnotation");
 		assertEquals("fieldWithAnnotation", fieldWithAnnotation.getElementName());
-		assertFalse(methodWinouthAnnotation.isExistAnnotation());
+		assertTrue(fieldWithAnnotation.isExistAnnotation());
 
 	}
 
