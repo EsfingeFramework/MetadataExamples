@@ -19,6 +19,7 @@ public class ModifiersExamples {
 	@Test(expected=AnnotationValidationException.class)
 	public void testInvalidModyfers() throws AnnotationValidationException {
 		MetadataValidator.validateMetadataOn(StaticFieldInvalid.class);
+		
 
 	}
 }
