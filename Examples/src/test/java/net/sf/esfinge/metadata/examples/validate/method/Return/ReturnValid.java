@@ -5,8 +5,6 @@ import net.sf.esfinge.metadata.examples.validate.method.test.OneAnnotationWithVa
 import net.sf.esfinge.metadata.examples.validate.method.test.OneAnnotationWithValidNumberOfParameters;
 
 public class ReturnValid {
-	
-	
 	@OneAnnotationWithValidMethodReturn
 	public strictfp int someCalc(int a, int b){
 		return a+b;		

@@ -12,6 +12,7 @@ import net.sf.esfinge.metadata.annotation.container.ContainsAnnotation;
 import net.sf.esfinge.metadata.annotation.container.ElementName;
 import net.sf.esfinge.metadata.annotation.container.ProcessFields;
 import net.sf.esfinge.metadata.annotation.container.ProcessMethods;
+import net.sf.esfinge.metadata.annotation.container.Processors;
 import net.sf.esfinge.metadata.annotation.container.ReflectionReference;
 import net.sf.esfinge.metadata.container.ContainerTarget;
 
@@ -36,6 +37,21 @@ public class ContainerClass {
 	@AllFieldsWith(AnnotationInElement.class)
 	private List<FieldContainer> fieldWithAnnotation;
 	
+	@Processors(ProcessAnnotation.class)
+	private List<Method> executeProcessor;
+	
+	
+	
+	
+
+	public List<Method> getExecuteProcessor() {
+		return executeProcessor;
+	}
+
+	public void setExecuteProcessor(List<Method> executeProcessor) {
+		this.executeProcessor = executeProcessor;
+	}
+
 	public String getElementName() {
 		return elementName;
 	}

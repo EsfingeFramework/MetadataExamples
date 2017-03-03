@@ -17,7 +17,7 @@ public class VisibilityTest {
 
 	}
 
-	@Test//(expected=AnnotationValidationException.class)
+	@Test(expected=AnnotationValidationException.class)
 	public void testInvalidVisibility() throws AnnotationValidationException {
 		MetadataValidator.validateMetadataOn(VisibilityRequeridInvalid.class);
 

@@ -1,5 +1,6 @@
 package net.sf.esfinge.metadata.examples.annotationReader.advanced;
 
+@AnnotationInClass
 public class ClassForReader {
 	
 	

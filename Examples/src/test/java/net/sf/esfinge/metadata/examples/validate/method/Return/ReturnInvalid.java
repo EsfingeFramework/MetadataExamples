@@ -5,12 +5,8 @@ import net.sf.esfinge.metadata.examples.validate.method.test.OneAnnotationWithVa
 import net.sf.esfinge.metadata.examples.validate.method.test.OneAnnotationWithValidNumberOfParameters;
 
 public class ReturnInvalid {
-	
-	
 	@OneAnnotationWithValidMethodReturn
 	private strictfp String someCalc(double a){
 		return "INVALID";		
 	}
-
-
 }

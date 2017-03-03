@@ -5,8 +5,7 @@ import net.sf.esfinge.metadata.examples.validate.method.test.OneAnnotationWithMe
 public class NamingConvectionFalse {
 
 	@OneAnnotationWithMethodNamingConvention
-	public void setName()
-	{
+	public void setName(){
 		
 	}
 }
