@@ -2,6 +2,8 @@ package net.sf.esfinge.metadata.examples.annotationReader.advanced;
 
 import java.lang.reflect.Method;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import net.sf.esfinge.metadata.TestAnnotationReader.Tabela;
 import net.sf.esfinge.metadata.annotation.container.AllFieldsWith;
@@ -29,26 +31,26 @@ public class ContainerClass {
 	private List<MethodContainer> methodContainer; 
 	
 	@ProcessFields
-	private List<FieldContainer> fieldContainer; 
+	private Set<FieldContainer> fieldContainer; 
 	
 	@AllMethodsWith(AnnotationInElement.class)
-	private List<MethodContainer> methodWithAnnotation; 
+	private Map<Method,MethodContainer> methodWithAnnotation; 
 	
 	@AllFieldsWith(AnnotationInElement.class)
 	private List<FieldContainer> fieldWithAnnotation;
 	
 	@Processors(ProcessAnnotation.class)
-	private List<Method> executeProcessor;
+	private List<ProcessorInterface> executeProcessor;
 	
 	
 	
 	
 
-	public List<Method> getExecuteProcessor() {
+	public List<ProcessorInterface> getExecuteProcessor() {
 		return executeProcessor;
 	}
 
-	public void setExecuteProcessor(List<Method> executeProcessor) {
+	public void setExecuteProcessor(List<ProcessorInterface> executeProcessor) {
 		this.executeProcessor = executeProcessor;
 	}
 
@@ -76,19 +78,19 @@ public class ContainerClass {
 		this.methodContainer = methodContainer;
 	}
 
-	public List<FieldContainer> getFieldContainer() {
+	public Set<FieldContainer> getFieldContainer() {
 		return fieldContainer;
 	}
 
-	public void setFieldContainer(List<FieldContainer> fieldContainer) {
+	public void setFieldContainer(Set<FieldContainer> fieldContainer) {
 		this.fieldContainer = fieldContainer;
 	}
 
-	public List<MethodContainer> getMethodWithAnnotation() {
+	public Map<Method,MethodContainer> getMethodWithAnnotation() {
 		return methodWithAnnotation;
 	}
 
-	public void setMethodWithAnnotation(List<MethodContainer> methodWithAnnotation) {
+	public void setMethodWithAnnotation(Map<Method,MethodContainer> methodWithAnnotation) {
 		this.methodWithAnnotation = methodWithAnnotation;
 	}
 

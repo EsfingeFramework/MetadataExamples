@@ -8,5 +8,5 @@ import net.sf.esfinge.metadata.annotation.container.InitProcessor;
 public interface ProcessorInterface {
 
 	@InitProcessor
-	public void processorToInit(Annotation ann, AnnotatedElement ael, ContainerClass annotc);
+	public void processorToInit(Annotation ann, AnnotatedElement ael, ContainerClass cont);
 }
