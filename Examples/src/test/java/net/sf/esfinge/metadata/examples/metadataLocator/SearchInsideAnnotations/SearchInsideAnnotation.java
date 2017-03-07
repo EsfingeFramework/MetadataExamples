@@ -14,7 +14,6 @@ public class SearchInsideAnnotation {
 	@Test
 	public void metadataLocatorTestWithAnnotation() {
 		List<Annotation> annotationList = AnnotationFinder.findAnnotation(ElementWithMetadata.class, AnotationInAnotation.class);
-		System.out.println("");
 		assertTrue(annotationList.size()>0);
 		assertTrue(annotationList.get(0) instanceof AnotationInAnotation);
 	}
