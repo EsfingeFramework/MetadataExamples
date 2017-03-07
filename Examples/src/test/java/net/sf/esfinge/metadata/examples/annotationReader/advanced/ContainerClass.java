@@ -5,13 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import net.sf.esfinge.metadata.TestAnnotationReader.Tabela;
 import net.sf.esfinge.metadata.annotation.container.AllFieldsWith;
 import net.sf.esfinge.metadata.annotation.container.AllMethodsWith;
-import net.sf.esfinge.metadata.annotation.container.AnnotationProperty;
 import net.sf.esfinge.metadata.annotation.container.ContainerFor;
-import net.sf.esfinge.metadata.annotation.container.ContainsAnnotation;
 import net.sf.esfinge.metadata.annotation.container.ElementName;
+import net.sf.esfinge.metadata.annotation.container.ElementProperty;
 import net.sf.esfinge.metadata.annotation.container.ProcessFields;
 import net.sf.esfinge.metadata.annotation.container.ProcessMethods;
 import net.sf.esfinge.metadata.annotation.container.Processors;
@@ -42,10 +40,22 @@ public class ContainerClass {
 	@Processors(ProcessAnnotation.class)
 	private List<ProcessorInterface> executeProcessor;
 	
+	@ElementProperty
+	private List<PropertyContainer> propety;
+	
 	
 	
 	
 
+	public List<PropertyContainer> getPropety() {
+		return propety;
+	}
+
+	public void setPropety(List<PropertyContainer> propety) {
+		this.propety = propety;
+	}
+
+	
 	public List<ProcessorInterface> getExecuteProcessor() {
 		return executeProcessor;
 	}
@@ -127,12 +137,7 @@ public class ContainerClass {
 	}
 
 
-	@Override
-	public String toString() {
-		return "ContainerClass [elementName=" + elementName + ", reference=" + reference + ", methodContainer="
-				+ methodContainer + ", fieldContainer=" + fieldContainer + ", methodWithAnnotation="
-				+ methodWithAnnotation + ", fieldWithAnnotation=" + fieldWithAnnotation + "]";
-	}
+	
 	
 	
 }

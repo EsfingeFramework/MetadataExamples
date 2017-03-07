@@ -23,19 +23,15 @@ public class AnnotationReaderTest {
 		assertEquals(AnnotationInClass.class, proc.getAnnotation().annotationType());
 		assertEquals(ClassForReader.class,proc.getAnnotedElement());
 		
-		MethodContainer methodWithAnnotation = container.getAnnotedMethod("methodWithAnnotation");
-		assertEquals("methodWithAnnotation", methodWithAnnotation.getElementName());
+		MethodContainer methodWithAnnotation = container.getAnnotedMethod("setFieldWithAnnotation");
+		assertEquals("setFieldWithAnnotation", methodWithAnnotation.getElementName());
 		assertTrue(methodWithAnnotation.isExistAnnotation());
 		
-		MethodContainer methodWinouthAnnotation = container.getAnnotedMethod("methodWinouthAnnotation");
-		assertEquals("methodWinouthAnnotation", methodWinouthAnnotation.getElementName());
+		MethodContainer methodWinouthAnnotation = container.getAnnotedMethod("getFieldWithAnnotation");
+		assertEquals("getFieldWithAnnotation", methodWinouthAnnotation.getElementName());
 		assertFalse(methodWinouthAnnotation.isExistAnnotation());
 		
 		
-		FieldContainer fieldWinouthAnnotation = container.getAnnotedField("fieldWinouthAnnotation");
-		assertEquals("fieldWinouthAnnotation", fieldWinouthAnnotation.getElementName());
-		assertFalse(fieldWinouthAnnotation.isExistAnnotation());
-
 		FieldContainer fieldWithAnnotation = container.getAnnotedField("fieldWithAnnotation");
 		assertEquals("fieldWithAnnotation", fieldWithAnnotation.getElementName());
 		assertTrue(fieldWithAnnotation.isExistAnnotation());
