@@ -2,8 +2,6 @@ package net.sf.esfinge.metadata.examples.annotationReader.advanced;
 
 import java.lang.reflect.Method;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import net.sf.esfinge.metadata.annotation.container.AllFieldsWith;
 import net.sf.esfinge.metadata.annotation.container.AllMethodsWith;
@@ -29,16 +27,16 @@ public class ContainerClass {
 	private List<MethodContainer> methodContainer; 
 	
 	@ProcessFields
-	private Set<FieldContainer> fieldContainer; 
+	private List<FieldContainer> fieldContainer; 
 	
 	@AllMethodsWith(AnnotationInElement.class)
-	private Map<Method,MethodContainer> methodWithAnnotation; 
+	private List<MethodContainer> methodWithAnnotation; 
 	
 	@AllFieldsWith(AnnotationInElement.class)
 	private List<FieldContainer> fieldWithAnnotation;
 	
 	@Processors(ProcessAnnotation.class)
-	private List<ProcessorInterface> executeProcessor;
+	private List<Method> executeProcessor;
 	
 	@ElementProperty
 	private List<PropertyContainer> propety;
@@ -55,12 +53,12 @@ public class ContainerClass {
 		this.propety = propety;
 	}
 
-	
-	public List<ProcessorInterface> getExecuteProcessor() {
+
+	public List<Method> getExecuteProcessor() {
 		return executeProcessor;
 	}
 
-	public void setExecuteProcessor(List<ProcessorInterface> executeProcessor) {
+	public void setExecuteProcessor(List<Method> executeProcessor) {
 		this.executeProcessor = executeProcessor;
 	}
 
@@ -88,19 +86,19 @@ public class ContainerClass {
 		this.methodContainer = methodContainer;
 	}
 
-	public Set<FieldContainer> getFieldContainer() {
+	public List<FieldContainer> getFieldContainer() {
 		return fieldContainer;
 	}
 
-	public void setFieldContainer(Set<FieldContainer> fieldContainer) {
+	public void setFieldContainer(List<FieldContainer> fieldContainer) {
 		this.fieldContainer = fieldContainer;
 	}
 
-	public Map<Method,MethodContainer> getMethodWithAnnotation() {
+	public List<MethodContainer> getMethodWithAnnotation() {
 		return methodWithAnnotation;
 	}
 
-	public void setMethodWithAnnotation(Map<Method,MethodContainer> methodWithAnnotation) {
+	public void setMethodWithAnnotation(List<MethodContainer> methodWithAnnotation) {
 		this.methodWithAnnotation = methodWithAnnotation;
 	}
 
