@@ -14,8 +14,9 @@ public class TestProcessors {
 		AnnotationReader ar = new AnnotationReader();
 		
 		Container ct = new Container();
-		ct = ar.readingAnnotationsTo(ClassToTest.class, ct.getClass());
-		System.out.println(ct.getContainerProp());
+		ct = ar.readingAnnotationsTo(ClassToTest.class, Container.class);
+		System.out.println(ct.getContainerProp().get(0).getListProperty().get(0));
+		
 	}
 
 }

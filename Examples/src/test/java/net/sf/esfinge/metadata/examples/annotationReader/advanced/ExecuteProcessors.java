@@ -3,13 +3,14 @@ package net.sf.esfinge.metadata.examples.annotationReader.advanced;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AnnotatedElement;
 
-public class ExecuteProcessors implements ProcessorInterface {
+public class ExecuteProcessors implements PropertyProcessorInterface {
 
-	public void processorToInit(Annotation ann, AnnotatedElement ael, ContainerClass annotc) {
-		System.out.println(ann);
-		System.out.println(ael);
-		System.out.println(annotc.getClass().getName());
-		
+	Annotation ann;
+	AnnotatedElement ael;
+
+	public void Execute(Annotation ann, AnnotatedElement ael) {
+		this.ann = ann;
+		this.ael = ael;
 	}
 
 }

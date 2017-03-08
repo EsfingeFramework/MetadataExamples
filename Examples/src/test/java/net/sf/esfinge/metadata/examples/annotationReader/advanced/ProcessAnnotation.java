@@ -1,10 +1,14 @@
 package net.sf.esfinge.metadata.examples.annotationReader.advanced;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.lang.annotation.ElementType;
 
 
-@Retention(RUNTIME)
+@Target(ElementType.ANNOTATION_TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+
 public @interface ProcessAnnotation {
-	Class<? extends ProcessorInterface> value();
+	Class<? extends PropertyProcessorInterface> value();
 }

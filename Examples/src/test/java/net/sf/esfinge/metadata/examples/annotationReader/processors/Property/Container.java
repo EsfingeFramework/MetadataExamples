@@ -7,7 +7,6 @@ import net.sf.esfinge.metadata.annotation.container.ElementName;
 import net.sf.esfinge.metadata.annotation.container.ElementProperty;
 import net.sf.esfinge.metadata.annotation.container.PropertyProcessors;
 import net.sf.esfinge.metadata.container.ContainerTarget;
-import net.sf.esfinge.metadata.properties.annotation.PropertyAnnotation;
 
 @ContainerFor(ContainerTarget.TYPE)
 public class Container {
