@@ -15,9 +15,13 @@ public class AnnotationReaderTest {
 		
 		container = annotationReader.readingAnnotationsTo(ClassForReader.class, ContainerClass.class);
 		
-		 
-		
 		assertEquals(ClassForReader.class, container.getReference());
+		
+		ExecuteProcessors proc=  (ExecuteProcessors) container.getExecuteProcessor().get(0);
+		
+		assertTrue(proc.getContainer() instanceof ContainerClass);
+		assertEquals(AnnotationInClass.class, proc.getAnnotation().annotationType());
+		assertEquals(ClassForReader.class,proc.getAnnotedElement());
 		
 		MethodContainer methodWithAnnotation = container.getAnnotedMethod("methodWithAnnotation");
 		assertEquals("methodWithAnnotation", methodWithAnnotation.getElementName());
@@ -32,7 +36,6 @@ public class AnnotationReaderTest {
 		assertEquals("fieldWinouthAnnotation", fieldWinouthAnnotation.getElementName());
 		assertFalse(fieldWinouthAnnotation.isExistAnnotation());
 
-		
 		FieldContainer fieldWithAnnotation = container.getAnnotedField("fieldWithAnnotation");
 		assertEquals("fieldWithAnnotation", fieldWithAnnotation.getElementName());
 		assertTrue(fieldWithAnnotation.isExistAnnotation());
