@@ -1,6 +1,7 @@
 package net.sf.esfinge.metadata.examples.validate.method.Visibility;
 
-import net.sf.esfinge.metadata.examples.validate.method.test.OneAnnotationWithValidNumberOfParameters;
+import net.sf.esfinge.metadata.examples.validate.method.test.OneAnnotationWithMethodVisibilityForbidden;
+import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithValidNumberOfParameters;
 
 public class ParameterForbidenInvalid {
 	
