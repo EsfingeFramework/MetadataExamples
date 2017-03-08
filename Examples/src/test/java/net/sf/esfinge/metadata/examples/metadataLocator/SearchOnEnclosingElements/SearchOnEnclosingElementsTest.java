@@ -14,7 +14,6 @@ public class SearchOnEnclosingElementsTest {
 	@Test
 	public void testWithAnnotation() throws NoSuchFieldException, SecurityException {
 		List<Annotation> annotationList = AnnotationFinder.findAnnotation(ClassWithAnnotation.class.getDeclaredField("selectedElement"), AnnotationInClass.class);
-		System.out.println("");
 		assertTrue(annotationList.size()>0);
 		assertTrue(annotationList.get(0) instanceof AnnotationInClass);
 	}

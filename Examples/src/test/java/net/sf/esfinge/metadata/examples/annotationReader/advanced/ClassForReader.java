@@ -4,18 +4,21 @@ package net.sf.esfinge.metadata.examples.annotationReader.advanced;
 public class ClassForReader {
 	
 	
-	private String fieldWinouthAnnotation;
-	
 	@AnnotationInElement
 	private String fieldWithAnnotation;
 	
-	@AnnotationInElement
-	public void methodWithAnnotation(){
+	
+
+	@PropAnotationExecute
+	public void getFieldWithAnnotation(){
 		
 	}
 	
-	public void methodWinouthAnnotation(){
-		
+	@AnnotationInElement
+	public void setFieldWithAnnotation(String fieldWithAnnotation) {
+		this.fieldWithAnnotation = fieldWithAnnotation;
 	}	
+	
+	
 	
 }
