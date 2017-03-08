@@ -1,6 +1,6 @@
 package net.sf.esfinge.metadata.examples.annotationReader.processors;
 
-import net.sf.esfinge.metadata.examples.annotationReader.processors.Property.Annotation;
+import net.sf.esfinge.metadata.examples.annotationReader.processors.Property.AnnotationProcess;
 
 
 public class ClassToTest {
@@ -8,7 +8,7 @@ public class ClassToTest {
 	private int prop;
 
 	
-	@Annotation
+	@AnnotationProcess
 	public int getProp() {
 		return prop;
 	}

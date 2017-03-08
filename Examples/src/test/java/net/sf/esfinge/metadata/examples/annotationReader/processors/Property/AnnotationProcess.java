@@ -19,6 +19,6 @@ import net.sf.esfinge.metadata.examples.annotationReader.advanced.ProcessAnnotat
 @SearchOnEnclosingElements
 @SearchInsideAnnotations
 
-public @interface Annotation {
+public @interface AnnotationProcess {
 
 }
