@@ -4,19 +4,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithFinalMethodOnly;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithForbiddenMethodReturn;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithInstanceMethodOnly;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithMethodNamingConvention;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithMethodVisibilityForbidden;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithMethodVisibilityRequired;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithNoParametersMethodOnly;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithStaticMethodOnly;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithStrictfpMethodOnly;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithSynchronizedMethodOnly;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithValidMethodParameterTypes;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithValidMethodReturn;
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithValidNumberOfParameters;
 
 public class Person {
 	

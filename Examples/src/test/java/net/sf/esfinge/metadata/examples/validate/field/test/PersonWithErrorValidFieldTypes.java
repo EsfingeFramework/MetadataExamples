@@ -3,7 +3,6 @@ package net.sf.esfinge.metadata.examples.validate.field.test;
 import java.util.HashSet;
 import java.util.Set;
 
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithValidFieldTypes;
 import net.sf.esfinge.metadata.validate.field.test.Person;
 
 public class PersonWithErrorValidFieldTypes extends Person{

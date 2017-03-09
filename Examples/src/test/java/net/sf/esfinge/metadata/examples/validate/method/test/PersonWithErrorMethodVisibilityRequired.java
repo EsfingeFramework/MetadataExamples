@@ -1,7 +1,5 @@
 package net.sf.esfinge.metadata.examples.validate.method.test;
 
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithMethodVisibilityRequired;
-import net.sf.esfinge.metadata.validate.method.test.Person;
 
 public class PersonWithErrorMethodVisibilityRequired extends Person{
 		

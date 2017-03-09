@@ -1,7 +1,5 @@
 package net.sf.esfinge.metadata.examples.validate.method.test;
 
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithFinalMethodOnly;
-import net.sf.esfinge.metadata.validate.method.test.Person;
 
 public class PersonWithErrorFinalMethodOnly extends Person{
 	

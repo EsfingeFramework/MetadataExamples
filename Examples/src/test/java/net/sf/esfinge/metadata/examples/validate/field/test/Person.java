@@ -4,14 +4,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithFieldVisibilityForbidden;
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithFieldVisibilityRequired;
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithFinalFieldOnly;
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithInstanceFieldOnly;
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithStaticFieldOnly;
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithTransientFieldOnly;
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithValidFieldTypes;
-import net.sf.esfinge.metadata.validate.field.test.OneAnnotationWithVolatileFieldOnly;
 
 public class Person {
 	

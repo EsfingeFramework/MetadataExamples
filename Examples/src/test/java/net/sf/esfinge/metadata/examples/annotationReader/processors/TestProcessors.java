@@ -26,7 +26,6 @@ public class TestProcessors {
 		
 		assertEquals("getProp", m1.getName());
 		assertTrue(c.getAnn() instanceof AnnotationProcess);
-		System.out.println();
 	}
 
 }

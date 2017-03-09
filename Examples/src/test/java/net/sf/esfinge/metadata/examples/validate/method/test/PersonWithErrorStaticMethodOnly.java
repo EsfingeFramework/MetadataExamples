@@ -1,7 +1,5 @@
 package net.sf.esfinge.metadata.examples.validate.method.test;
 
-import net.sf.esfinge.metadata.validate.method.test.OneAnnotationWithStaticMethodOnly;
-import net.sf.esfinge.metadata.validate.method.test.Person;
 
 public class PersonWithErrorStaticMethodOnly extends Person{
 	
