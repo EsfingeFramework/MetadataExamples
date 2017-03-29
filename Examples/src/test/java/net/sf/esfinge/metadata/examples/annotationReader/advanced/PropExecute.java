@@ -6,8 +6,9 @@ import java.lang.reflect.AnnotatedElement;
 public class PropExecute implements PropertyProcessorInterface {
 
 	AnnotatedElement element;
-	public void Execute(Annotation ann, AnnotatedElement ael) {
+	public AnnotatedElement Execute(Annotation ann, AnnotatedElement ael) {
 		this.element = element;
+		return ael;
 	}
 	
 	

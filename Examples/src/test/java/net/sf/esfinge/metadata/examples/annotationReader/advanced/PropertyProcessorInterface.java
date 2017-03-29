@@ -3,10 +3,11 @@ package net.sf.esfinge.metadata.examples.annotationReader.advanced;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AnnotatedElement;
 
-import net.sf.esfinge.metadata.annotation.container.InitProcessor;
+import net.sf.esfinge.metadata.annotation.container.ExecuteProcessor;
+import net.sf.esfinge.metadata.examples.metadataLocator.SearchInsideAnnotations.ElementWithMetadata;
 
 public interface PropertyProcessorInterface {
 	
-	@InitProcessor
-	public void Execute(Annotation ann, AnnotatedElement ael);
+	@ExecuteProcessor
+	public AnnotatedElement Execute(Annotation ann, AnnotatedElement ael);
 }

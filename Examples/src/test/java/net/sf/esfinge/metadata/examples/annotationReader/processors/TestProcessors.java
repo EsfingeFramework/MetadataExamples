@@ -2,8 +2,10 @@ package net.sf.esfinge.metadata.examples.annotationReader.processors;
 
 import static org.junit.Assert.*;
 
+import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Method;
 
+import org.hamcrest.core.IsInstanceOf;
 import org.junit.Test;
 
 import net.sf.esfinge.metadata.AnnotationReader;
@@ -24,8 +26,32 @@ public class TestProcessors {
 		ExecuteProcessors c = (ExecuteProcessors) ct.getContainerProp().get(0).getListProperty().get(0);
 		Method m1 = (Method)c.getAel();
 		
+		
+		
+		Object var = ct.getContainerProp().get(0).getListPropertyReturn().get(0);
+		
+		AnnotatedElement returnMethod= ct.getElementReturnList().get(ClassToTest.class.getMethod("getProp"));
+		
+		returnMethod= ct.getElementReturnList().get(ClassToTest.class.getMethod("getProp"));
+		
+		PropertyProcessorInterface interf = ct.getElementObjectList().get(ClassToTest.class.getMethod("getProp"));
+				
 		assertEquals("getProp", m1.getName());
 		assertTrue(c.getAnn() instanceof AnnotationProcess);
+		assertTrue(c.getAnn() instanceof AnnotationProcess);
+		assertTrue(var instanceof AnnotatedElement);
+		assertTrue(ct.getFieldAddProcessor().isEmpty());
+		assertTrue(ct.getFieldReturn().isEmpty());
+ 		assertEquals(1,ct.getClassElement().size());
+		assertTrue(ct.getClassElement().get(0) instanceof ExecuteProcessors);
+
+		assertFalse(ct.getElementObjectList().isEmpty());
+		assertFalse(ct.getElementReturnList().isEmpty());
+		assertTrue(returnMethod.equals(ClassToTest.class));
+	
+		assertTrue(interf.getClass().equals(ExecuteProcessors.class));
+
+		
 	}
 
 }

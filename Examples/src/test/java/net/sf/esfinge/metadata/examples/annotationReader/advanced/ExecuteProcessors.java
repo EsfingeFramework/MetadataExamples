@@ -29,9 +29,10 @@ public class ExecuteProcessors implements PropertyProcessorInterface {
 	}
 
 
-	public void Execute(Annotation ann, AnnotatedElement ael) {
+	public AnnotatedElement Execute(Annotation ann, AnnotatedElement ael) {
 		this.ann = ann;
 		this.ael = ael;
+		return ael;
 	}
 
 }
