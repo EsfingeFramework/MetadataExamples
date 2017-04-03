@@ -1,6 +1,8 @@
 package net.sf.esfinge.metadata.examples.annotationReader.advanced;
 
+import java.lang.reflect.Field;
 import java.util.List;
+import java.util.Map;
 
 import net.sf.esfinge.metadata.annotation.container.ContainerFor;
 import net.sf.esfinge.metadata.annotation.container.ElementName;
@@ -32,7 +34,8 @@ public class PropertyContainer {
 	public void setProcessor(List<PropertyProcessorInterface> processor) {
 		this.processor = processor;
 	}
-	
-	
 
+	
+	
+	
 }

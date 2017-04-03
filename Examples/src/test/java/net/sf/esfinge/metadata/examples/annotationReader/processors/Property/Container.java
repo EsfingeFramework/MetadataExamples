@@ -9,10 +9,10 @@ import java.util.Map;
 import net.sf.esfinge.metadata.annotation.container.ContainerFor;
 import net.sf.esfinge.metadata.annotation.container.ElementName;
 import net.sf.esfinge.metadata.annotation.container.ElementProperty;
-import net.sf.esfinge.metadata.annotation.container.FieldProcessors;
-import net.sf.esfinge.metadata.annotation.container.MethodProcessors;
+import net.sf.esfinge.metadata.annotation.container.ProcessorPerField;
+import net.sf.esfinge.metadata.annotation.container.ProcessorPerMethod;
 import net.sf.esfinge.metadata.annotation.container.ProcessorType;
-import net.sf.esfinge.metadata.annotation.container.Processors;
+import net.sf.esfinge.metadata.annotation.container.CustomReader;
 import net.sf.esfinge.metadata.container.ContainerTarget;
 import net.sf.esfinge.metadata.examples.annotationReader.advanced.ProcessAnnotation;
 import net.sf.esfinge.metadata.examples.annotationReader.advanced.PropertyProcessorInterface;
@@ -26,20 +26,20 @@ public class Container {
 	@ElementProperty
 	private List<PropertyContainer> containerProp;
 
-	@Processors(value=ProcessAnnotation.class,type = ProcessorType.READER_ADDS_PROCESSOR)
+	@CustomReader(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_ADDS_PROCESSOR)
 	private List<PropertyProcessorInterface> classElement;
 	
-	@MethodProcessors(value=ProcessAnnotation.class,type = ProcessorType.READER_RETURNS_PROCESSOR)
+	@ProcessorPerMethod(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_RETURNS_PROCESSOR)
 	private Map<Method,AnnotatedElement> elementReturnList;
 	
-	@MethodProcessors(value=ProcessAnnotation.class,type = ProcessorType.READER_ADDS_PROCESSOR)
+	@ProcessorPerMethod(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_ADDS_PROCESSOR)
 	private Map<Method, PropertyProcessorInterface> elementObjectList;
 
 	
-	@FieldProcessors(value=ProcessAnnotation.class,type = ProcessorType.READER_RETURNS_PROCESSOR)
+	@ProcessorPerField(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_RETURNS_PROCESSOR)
 	private Map<Field,AnnotatedElement> fieldReturn;
 	
-	@FieldProcessors(value=ProcessAnnotation.class,type = ProcessorType.READER_ADDS_PROCESSOR)
+	@ProcessorPerField(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_ADDS_PROCESSOR)
 	private Map<Field,PropertyProcessorInterface> fieldAddProcessor;
 
 	

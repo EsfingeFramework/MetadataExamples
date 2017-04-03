@@ -12,11 +12,11 @@ import net.sf.esfinge.metadata.annotation.container.ElementProperty;
 import net.sf.esfinge.metadata.annotation.container.ProcessFields;
 import net.sf.esfinge.metadata.annotation.container.ProcessMethods;
 import net.sf.esfinge.metadata.annotation.container.ProcessorType;
-import net.sf.esfinge.metadata.annotation.container.Processors;
+import net.sf.esfinge.metadata.annotation.container.CustomReader;
 import net.sf.esfinge.metadata.annotation.container.ReflectionReference;
 import net.sf.esfinge.metadata.container.ContainerTarget;
 
-@Processors(ProcessAnnotation.class)
+//@Processors(ProcessAnnotation.class)
 @ContainerFor(ContainerTarget.TYPE)
 public class ContainerClass {
 	
@@ -38,10 +38,10 @@ public class ContainerClass {
 	@AllFieldsWith(AnnotationInElement.class)
 	private List<FieldContainer> fieldWithAnnotation;
 	
-	@Processors(value=ProcessAnnotation.class,type=ProcessorType.READER_RETURNS_PROCESSOR)
+	@CustomReader(configAnnotation=ProcessAnnotation.class,type=ProcessorType.READER_RETURNS_PROCESSOR)
 	private List<AnnotatedElement> executeProcessorMethod;
 	
-	@Processors(value=ProcessAnnotation.class,type=ProcessorType.READER_ADDS_PROCESSOR)
+	@CustomReader(configAnnotation=ProcessAnnotation.class,type=ProcessorType.READER_ADDS_PROCESSOR)
 	private List<PropertyProcessorInterface> executeProcessor;
 
 	

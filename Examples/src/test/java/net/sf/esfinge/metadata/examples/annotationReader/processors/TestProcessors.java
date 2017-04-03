@@ -35,7 +35,10 @@ public class TestProcessors {
 		returnMethod= ct.getElementReturnList().get(ClassToTest.class.getMethod("getProp"));
 		
 		PropertyProcessorInterface interf = ct.getElementObjectList().get(ClassToTest.class.getMethod("getProp"));
-				
+		
+		PropertyProcessorInterface processorInterface = ct.getClassElement().get(0);
+		
+		
 		assertEquals("getProp", m1.getName());
 		assertTrue(c.getAnn() instanceof AnnotationProcess);
 		assertTrue(c.getAnn() instanceof AnnotationProcess);
@@ -50,6 +53,8 @@ public class TestProcessors {
 		assertTrue(returnMethod.equals(ClassToTest.class));
 	
 		assertTrue(interf.getClass().equals(ExecuteProcessors.class));
+		assertTrue(processorInterface instanceof ExecuteProcessors);
+		
 
 		
 	}
