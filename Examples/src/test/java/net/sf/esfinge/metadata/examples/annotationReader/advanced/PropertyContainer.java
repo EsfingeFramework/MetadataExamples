@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import net.sf.esfinge.metadata.annotation.container.ContainerFor;
+import net.sf.esfinge.metadata.annotation.container.CustomReader;
 import net.sf.esfinge.metadata.annotation.container.ElementName;
 import net.sf.esfinge.metadata.annotation.container.ProcessorType;
 import net.sf.esfinge.metadata.annotation.container.PropertyProcessors;
@@ -16,7 +17,7 @@ public class PropertyContainer {
 	@ElementName
 	private String name;
 	
-	@PropertyProcessors(value=PropertyProcessorsAnnotation.class,type = ProcessorType.READER_ADDS_PROCESSOR)
+	@CustomReader(configAnnotation=PropertyProcessorsAnnotation.class, type = ProcessorType.READER_RETURNS_PROCESSOR)
 	private List<PropertyProcessorInterface> processor;
 
 	public String getName() {

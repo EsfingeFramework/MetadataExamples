@@ -6,8 +6,17 @@
   	<dependency>
   		<groupId>net.sf.esfinge</groupId>
   		<artifactId>metadata</artifactId>
-  		<version>1.3</version>
+  		<version>1.5</version>
   	</dependency>
   </dependencies>
   <artifactId>examples</artifactId>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>net.sf.esfinge</groupId>
+  			<artifactId>metadata</artifactId>
+  			<version>1.3</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>

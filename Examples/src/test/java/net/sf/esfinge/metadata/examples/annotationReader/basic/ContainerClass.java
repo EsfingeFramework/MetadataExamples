@@ -1,6 +1,5 @@
 package net.sf.esfinge.metadata.examples.annotationReader.basic;
 
-import net.sf.esfinge.metadata.TestAnnotationReader.Tabela;
 import net.sf.esfinge.metadata.annotation.container.AnnotationProperty;
 import net.sf.esfinge.metadata.annotation.container.ContainerFor;
 import net.sf.esfinge.metadata.annotation.container.ContainsAnnotation;

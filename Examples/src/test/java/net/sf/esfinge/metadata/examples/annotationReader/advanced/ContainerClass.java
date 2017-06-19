@@ -6,6 +6,7 @@ import java.util.List;
 
 import net.sf.esfinge.metadata.annotation.container.AllFieldsWith;
 import net.sf.esfinge.metadata.annotation.container.AllMethodsWith;
+import net.sf.esfinge.metadata.annotation.container.AnnotationPropertyLocation;
 import net.sf.esfinge.metadata.annotation.container.ContainerFor;
 import net.sf.esfinge.metadata.annotation.container.ElementName;
 import net.sf.esfinge.metadata.annotation.container.ElementProperty;
@@ -41,11 +42,10 @@ public class ContainerClass {
 	@CustomReader(configAnnotation=ProcessAnnotation.class,type=ProcessorType.READER_RETURNS_PROCESSOR)
 	private List<AnnotatedElement> executeProcessorMethod;
 	
-	@CustomReader(configAnnotation=ProcessAnnotation.class,type=ProcessorType.READER_ADDS_PROCESSOR)
+	@CustomReader(configAnnotation=ProcessAnnotation.class,type=ProcessorType.READER_IS_PROCESSOR)
 	private List<PropertyProcessorInterface> executeProcessor;
 
-	
-	@ElementProperty
+	@ElementProperty(property=AnnotationPropertyLocation.GETTER_ONLY)
 	private List<PropertyContainer> propety;
 	
 	

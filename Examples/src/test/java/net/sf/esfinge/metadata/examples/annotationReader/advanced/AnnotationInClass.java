@@ -7,7 +7,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import net.sf.esfinge.metadata.properties.annotation.Exec;
 
 @Retention(RUNTIME)
 @ProcessAnnotation(ExecuteProcessors.class)

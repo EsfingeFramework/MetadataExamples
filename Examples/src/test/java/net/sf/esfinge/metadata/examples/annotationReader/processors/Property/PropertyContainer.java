@@ -4,6 +4,7 @@ import java.lang.reflect.AnnotatedElement;
 import java.util.List;
 
 import net.sf.esfinge.metadata.annotation.container.ContainerFor;
+import net.sf.esfinge.metadata.annotation.container.CustomReader;
 import net.sf.esfinge.metadata.annotation.container.ElementName;
 import net.sf.esfinge.metadata.annotation.container.ElementProperty;
 import net.sf.esfinge.metadata.annotation.container.PropertyProcessors;
@@ -13,16 +14,15 @@ import net.sf.esfinge.metadata.examples.annotationReader.advanced.ProcessAnnotat
 import net.sf.esfinge.metadata.examples.annotationReader.advanced.PropertyProcessorInterface;
 
 @ContainerFor(ContainerTarget.ALL)
-@PropertyProcessors(value=ProcessAnnotation.class,type = ProcessorType.READER_IS_PROCESSOR)
 public class PropertyContainer {
 
 	@ElementName
 	private String propertyName;
 	
-	@PropertyProcessors(value=ProcessAnnotation.class,type = ProcessorType.READER_ADDS_PROCESSOR)
+	@CustomReader(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_IS_PROCESSOR)
 	private List<PropertyProcessorInterface> listProperty;
 	
-	@PropertyProcessors(value=ProcessAnnotation.class,type = ProcessorType.READER_RETURNS_PROCESSOR)
+	//@CustomReader(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_RETURNS_PROCESSOR)
 	private List<AnnotatedElement> listPropertyReturn;
 
 	public List<AnnotatedElement> getListPropertyReturn() {
