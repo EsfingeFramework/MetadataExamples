@@ -30,9 +30,7 @@ public class TestProcessors {
 		
 		//Object var = ct.getContainerProp().get(0).getListPropertyReturn().get(0);
 		
-		AnnotatedElement returnMethod= ct.getElementReturnList().get(ClassToTest.class.getMethod("getProp"));
 		
-		returnMethod= ct.getElementReturnList().get(ClassToTest.class.getMethod("getProp"));
 		
 		PropertyProcessorInterface interf = ct.getElementObjectList().get(ClassToTest.class.getMethod("getProp"));
 		
@@ -49,7 +47,6 @@ public class TestProcessors {
 
 		assertFalse(ct.getElementObjectList().isEmpty());
 		assertFalse(ct.getElementReturnList().isEmpty());
-		assertTrue(returnMethod.equals(ClassToTest.class));
 	
 		assertTrue(interf.getClass().equals(ExecuteProcessors.class));
 		assertTrue(processorInterface instanceof ExecuteProcessors);

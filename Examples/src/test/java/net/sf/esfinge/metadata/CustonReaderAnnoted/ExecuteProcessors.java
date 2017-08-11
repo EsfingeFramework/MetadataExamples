@@ -3,7 +3,6 @@ package net.sf.esfinge.metadata.CustonReaderAnnoted;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AnnotatedElement;
 
-import TestCustonReaderAnnoted.PropertyProcessorInterface;
 import net.sf.esfinge.metadata.annotation.container.ContainerFor;
 import net.sf.esfinge.metadata.annotation.container.ContainsAnnotation;
 import net.sf.esfinge.metadata.container.ContainerTarget;

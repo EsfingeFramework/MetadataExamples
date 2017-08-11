@@ -3,9 +3,6 @@ package net.sf.esfinge.metadata.CustonReaderAnnoted;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-
-import TestCustonReaderAnnoted.Container;
-import TestCustonReaderAnnoted.ExecuteProcessors;
 import net.sf.esfinge.metadata.AnnotationReader;
 import net.sf.esfinge.metadata.CustonReaderAnnoted.data.ClassWithMetadata;
 

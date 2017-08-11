@@ -4,7 +4,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 import java.lang.annotation.Retention;
 
-import TestCustonReaderAnnoted.PropertyProcessorInterface;
 
 
 @Retention(RUNTIME)

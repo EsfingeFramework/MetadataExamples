@@ -31,14 +31,14 @@ public class Container {
 	private List<PropertyProcessorInterface> classElement;
 	
 	@ProcessorPerMethod(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_RETURNS_PROCESSOR)
-	private Map<Method,AnnotatedElement> elementReturnList;
+	private Map<Method,PropertyProcessorInterface> elementReturnList;
 	
 	@ProcessorPerMethod(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_IS_PROCESSOR)
 	private Map<Method, PropertyProcessorInterface> elementObjectList;
 
 	
 	@ProcessorPerField(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_RETURNS_PROCESSOR)
-	private Map<Field,AnnotatedElement> fieldReturn;
+	private Map<Field,PropertyProcessorInterface> fieldReturn;
 	
 	@ProcessorPerField(configAnnotation=ProcessAnnotation.class,type = ProcessorType.READER_IS_PROCESSOR)
 	private Map<Field,PropertyProcessorInterface> fieldAddProcessor;
@@ -72,12 +72,12 @@ public class Container {
 	}
 
 
-	public Map<Method, AnnotatedElement> getElementReturnList() {
+	public Map<Method, PropertyProcessorInterface> getElementReturnList() {
 		return elementReturnList;
 	}
 
 
-	public void setElementReturnList(Map<Method, AnnotatedElement> elementReturnList) {
+	public void setElementReturnList(Map<Method, PropertyProcessorInterface> elementReturnList) {
 		this.elementReturnList = elementReturnList;
 	}
 
@@ -92,12 +92,12 @@ public class Container {
 	}
 
 
-	public Map<Field, AnnotatedElement> getFieldReturn() {
+	public Map<Field, PropertyProcessorInterface> getFieldReturn() {
 		return fieldReturn;
 	}
 
 
-	public void setFieldReturn(Map<Field, AnnotatedElement> fieldReturn) {
+	public void setFieldReturn(Map<Field, PropertyProcessorInterface> fieldReturn) {
 		this.fieldReturn = fieldReturn;
 	}
 
